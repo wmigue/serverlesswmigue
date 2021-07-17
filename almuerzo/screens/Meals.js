@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     vistas: {
         flexDirection: 'row',
         margin: 12,
-        paddingLeft: 65,
+        paddingLeft: 100,
         justifyContent: 'center',
         alignItems: 'center',
         

@@ -5,7 +5,7 @@ const { isAuthenticated, hasRole } = require('../auth/index')
 
 
 
-//obteniendo todos los pedidos  de un usuario
+// todos los pedidos  de un usuario
 router.get('/userOrders', isAuthenticated, hasRole('user'), (req, res) => {
     const { _id } = req.user_buscado
     Orders.find({user_id: _id}).select('meal_id user_id')
