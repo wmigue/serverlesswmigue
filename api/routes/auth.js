@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router() //manjando las peticiones o routers
 const crypto = require('crypto')
 const jwt = require('jsonwebtoken')
-import { Alert } from 'react-native'
 const Users = require('../models/Users')
 const { isAuthenticated } = require('../auth/index')
 

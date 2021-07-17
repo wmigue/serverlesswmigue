@@ -41,20 +41,25 @@ export default ({ navigation }) => {
             .then(x => x.text())
             .then(x => {
                 if (x === 'usuario creado con èxito.') {
-/*                return Alert.alert(
-                        'EXITO!',
-                        x,
-                        [
-                            { text: 'Ir al inicio', onPress: () => navigation.navigate('Login') }
-                        ]
-                    ) */
+                    /*                return Alert.alert(
+                                            'EXITO!',
+                                            x,
+                                            [
+                                                { text: 'Ir al inicio', onPress: () => navigation.navigate('Login') }
+                                            ]
+                                        ) */
                     alert("exito.")
-                }
-/*                 Alert.alert(
+                    navigation.navigate('Login')
+                } else {
+
+                    /*                 Alert.alert(
                     'ERROR:',
                     x,
                 ) */
                     alert("ya existe ese user.")
+
+                }
+
             })
     }
 
@@ -81,8 +86,6 @@ export default ({ navigation }) => {
                 autoCapitalize='none'>
             </TextInput>
             <Button title="REGISTRARSE!" onPress={handleSubmit}></Button>
-           
-
         </View>
     )
 }
